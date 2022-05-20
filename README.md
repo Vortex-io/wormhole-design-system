@@ -1,2 +1,2 @@
-# vortex-design-system
-Vor-Tex Design System
+# Wormhole
+Wormhole is Vor-Tex's design system
