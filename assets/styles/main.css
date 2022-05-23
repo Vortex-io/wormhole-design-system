@@ -1,0 +1,162 @@
+/* Worm–Hole Theme */
+
+/*
+ * Fonts
+*/
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('../fonts/HalyardDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/HalyardDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('../fonts/HalyardDisplayMedium.woff2') format('woff2'),
+        url('../fonts/HalyardDisplayMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('../fonts/HalyardDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/HalyardDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*
+ * Reset
+*/
+html, body, div, p, h1, h2, h3, h4, h5, h6, ul, li, ol, dd, dl, dt, form, legend, label, fieldset, legend, address, center, acronym, iframe, blockquote{margin:0;padding:0;font-style:normal;font-weight:normal;list-style:none;}
+*{box-sizing:border-box;}
+body{font:16px 'Halyard Display', Arial, Helvetica, sans-serif;background:#fff;color:#051C2C;}
+a, span{word-wrap:break-word;}
+img, fieldset, iframe{border:0;}
+a{text-decoration:none;color:#7739f5;cursor:pointer;}
+a:hover{color:#FFB632;}
+input, select, textarea{font:16px 'Halyard Display', Arial, Helvetica, sans-serif;outline:none;}
+textarea{margin:0;resize:none;}
+table{border-spacing:0;}
+table, tr, td, th, tbody, thead, tfoot, caption{border:0;margin:0;padding:0;border-collapse:collapse;word-wrap:break-word;}
+blockquote{quotes:none;}
+blockquote:before, blockquote:after{content:'';content:none;}
+
+/*
+ * Text Styles
+*/
+h1{font-size:40px;font-weight:bold;margin-bottom:25px;}
+h2{font-size:25px;font-weight:bold;margin-bottom:25px;}
+h3{font-size:22px;font-weight:bold;margin-bottom:20px;}
+h4{font-size:20px;font-weight:500;margin-bottom:20px;}
+h5{font-size:18px;font-weight:500;margin-bottom:15px;}
+h6{font-size:16px;font-weight:500;margin-bottom:15px;}
+p, ul, ol, dl{margin-bottom:15px;color:#666;}
+dl dd + dt{margin-top:30px;}
+dl dt{margin-bottom:10px;font-weight:500;color:#999;text-transform:uppercase;} 
+dl dd{margin-bottom:5px;}
+dl dd{margin-left:15px;}
+
+/*
+ * Structure
+*/
+.layout{padding:65px 0 0;}
+.page section{display:flex;align-items:flex-start;}
+.page section .sidebar{flex:0 0 350px;width:350px;padding:30px;}
+.page section article{flex-grow:1;padding:30px;}
+
+/*
+ * Header
+*/
+.header{position:fixed;top:0;left:0;right:0;background:#fff;display:flex;align-items:stretch;height:65px;
+    
+    /* Border bottom line */
+    /* border-bottom:1px solid #F1EBFE; */
+    
+    /* Blur */
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    
+}
+.header .logo{font-weight:bold;flex:0 0 350px;width:350px;padding:8px 30px 10px;font-size:32px;display:inline-block;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #7739f5,  
+        1px -1px 0 #7739f5,
+        -1px 1px 0 #7739f5,
+        1px 1px 0 #7739f5;
+}
+.header .logo:hover{
+    text-shadow:
+        -1px -1px 0 #7739f5,  
+        1px -1px 0 #7739f5,
+        -1px 1px 0 #7739f5,
+        1px 1px 0 #7739f5;
+}
+.header nav{flex-grow:1;display:flex;align-items:stretch;}
+.header nav ul{display:flex;align-items:stretch;margin:0;}
+.header nav ul li{display:flex;align-items:stretch;padding:0 30px;}
+.header nav ul li a{padding:20px 0 0;display:flex;align-items:center;border-bottom:3px solid transparent;}
+
+    /* Header Hover State */
+    .wormhole-theme .page[data-header-selected="components"] .header #components-link,
+    .wormhole-theme .page[data-header-selected="brand"] .header #brand-link,
+    .header nav ul li a.active,
+    
+    /* Header Hover State */
+    .header nav ul li a:hover{border-bottom-color:#FFB632;color:#FFB632;}
+
+
+/*
+ * Sidebar
+*/
+.page section .sidebar{}
+
+/*
+ * Sidebar Actives
+*/
+
+/*** COMPONENTS ***/
+
+/* Getting Started */
+.wormhole-theme .page[data-page="components/getting-started/installation"] .layout .sidebar a[data-id="components/getting-started/installation"],
+
+/* Content */
+.wormhole-theme .page[data-page="components/content/text-styles"] .layout .sidebar a[data-id="components/content/text-styles"],
+.wormhole-theme .page[data-page="components/content/sass-variables"] .layout .sidebar a[data-id="components/content/sass-variables"],
+.wormhole-theme .page[data-page="components/content/icons"] .layout .sidebar a[data-id="components/content/icons"],
+.wormhole-theme .page[data-page="components/content/tables"] .layout .sidebar a[data-id="components/content/tables"],
+
+/* Actions */
+.wormhole-theme .page[data-page="components/actions/button"] .layout .sidebar a[data-id="components/actions/button"],
+.wormhole-theme .page[data-page="components/actions/content-switcher"] .layout .sidebar a[data-id="components/actions/content-switcher"],
+.wormhole-theme .page[data-page="components/actions/toggle"] .layout .sidebar a[data-id="components/actions/toggle"],
+.wormhole-theme .page[data-page="components/actions/dropdown"] .layout .sidebar a[data-id="components/actions/dropdown"],
+
+/* Forms */
+.wormhole-theme .page[data-page="components/forms/text-fields"] .layout .sidebar a[data-id="components/forms/text-fields"],
+.wormhole-theme .page[data-page="components/forms/select"] .layout .sidebar a[data-id="components/forms/select"],
+.wormhole-theme .page[data-page="components/forms/checkbox-and-radio-buttons"] .layout .sidebar a[data-id="components/forms/checkbox-and-radio-buttons"],
+.wormhole-theme .page[data-page="components/forms/tags"] .layout .sidebar a[data-id="components/forms/tags"],
+.wormhole-theme .page[data-page="components/forms/validation"] .layout .sidebar a[data-id="components/forms/validation"],
+
+/* Navigation */
+.wormhole-theme .page[data-page="components/navigation/tabs"] .layout .sidebar a[data-id="components/navigation/tabs"],
+.wormhole-theme .page[data-page="components/navigation/steps"] .layout .sidebar a[data-id="components/navigation/steps"],
+.wormhole-theme .page[data-page="components/navigation/pagination"] .layout .sidebar a[data-id="components/navigation/pagination"],
+
+/* Overlays */
+.wormhole-theme .page[data-page="components/overlays/tooltip"] .layout .sidebar a[data-id="components/overlays/tooltip"],
+.wormhole-theme .page[data-page="components/overlays/modal"] .layout .sidebar a[data-id="components/overlays/modal"],
+.wormhole-theme .page[data-page="components/overlays/notification"] .layout .sidebar a[data-id="components/overlays/notification"],
+
+/* Active state */
+.wormhole-theme .page .layout .sidebar a.active{font-weight:bold;color:#FFB632;}

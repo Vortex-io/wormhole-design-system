@@ -1,2 +1,2 @@
-# Wormhole
-Wormhole is Vor-Tex's design system
+# Worm–Hole
+Worm–Hole is Vor-Tex's design system
