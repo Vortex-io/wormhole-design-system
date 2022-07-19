@@ -1,0 +1,94 @@
+/*** COMPONENTS ***/
+
+// Active States
+.page{
+    
+    // Getting Started
+    &[data-page="components/getting-started/installation"] .sidebar a[data-id="components/getting-started/installation"],
+
+    // Content
+    &[data-page="components/content/typography"] .sidebar a[data-id="components/content/typography"],
+    &[data-page="components/content/sass-variables"] .sidebar a[data-id="components/content/sass-variables"],
+    &[data-page="components/content/icons"] .sidebar a[data-id="components/content/icons"],
+    &[data-page="components/content/tables"] .sidebar a[data-id="components/content/tables"],
+
+    // Actions
+    &[data-page="components/actions/button"] .sidebar a[data-id="components/actions/button"],
+    &[data-page="components/actions/content-switcher"] .sidebar a[data-id="components/actions/content-switcher"],
+    &[data-page="components/actions/toggle"] .sidebar a[data-id="components/actions/toggle"],
+    &[data-page="components/actions/dropdown"] .sidebar a[data-id="components/actions/dropdown"],
+
+    // Forms
+    &[data-page="components/forms/text-fields"] .sidebar a[data-id="components/forms/text-fields"],
+    &[data-page="components/forms/select"] .sidebar a[data-id="components/forms/select"],
+    &[data-page="components/forms/checkbox-and-radio-buttons"] .sidebar a[data-id="components/forms/checkbox-and-radio-buttons"],
+    &[data-page="components/forms/tags"] .sidebar a[data-id="components/forms/tags"],
+    &[data-page="components/forms/validation"] .sidebar a[data-id="components/forms/validation"],
+
+    // Navigation
+    &[data-page="components/navigation/tabs"] .sidebar a[data-id="components/navigation/tabs"],
+    &[data-page="components/navigation/steps"] .sidebar a[data-id="components/navigation/steps"],
+    &[data-page="components/navigation/pagination"] .sidebar a[data-id="components/navigation/pagination"],
+
+    // Overlays
+    &[data-page="components/overlays/tooltip"] .sidebar a[data-id="components/overlays/tooltip"],
+    &[data-page="components/overlays/modal"] .sidebar a[data-id="components/overlays/modal"],
+    &[data-page="components/overlays/notification"] .sidebar a[data-id="components/overlays/notification"],
+
+    // Active state
+    .sidebar a.active{font-weight:bold;color:$orange;}  
+
+} 
+
+// Main Info
+.main-info{margin-bottom:30px;}
+
+
+// Component Examples
+.component-example{margin-bottom:30px;margin-top:30px;
+
+    // Tabs Content
+    .tabs-content{padding:10px;}
+
+    // Example Content
+    .component-example-content{display:none;
+
+        // Active state
+        &.active{display:block;}
+
+
+        // Tab Result
+        &[data-content="result"]{line-height:19px;border-radius:10px;padding:15px 20px;background:$gray-bg;
+            *{margin:15px 0 0;
+                &:first-child{margin-top:0;}
+            }
+        }
+
+        // Tab Code
+        &[data-content="code"]{
+            code{line-height:19px;display:block;}
+        }
+
+    }
+
+}
+
+// Component Options
+.component-option{
+    p, 
+    ul, 
+    ol, 
+    dl{margin-bottom:15px;}
+    dl{
+        dt{margin-top:30px;color:$gray;}
+        dt{margin-bottom:10px;font-weight:500;color:$gray;text-transform:uppercase;} 
+        dd{margin-bottom:5px;margin-left:15px;}
+        ul,
+        ol{margin-top:15px;
+            li{
+                div{padding-left:15px;}
+                .big{margin-bottom:5px;padding-left:0;font-weight:$fw-semi;}
+            }
+        }
+    }
+}

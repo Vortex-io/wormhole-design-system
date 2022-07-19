@@ -1,0 +1,45 @@
+@keyframes logo-spin {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(-#{360*2}deg);}
+}
+.header{position:fixed;top:0;left:0;right:0;display:flex;align-items:stretch;height:65px;z-index:2;    
+    .logo{font-weight:bold;flex:0 0 320px;width:320px;padding:8px 30px 10px;font-size:28px;display:flex;align-items:center;text-transform:uppercase;letter-spacing:2px;color:$white;text-shadow:-1px -1px 0 $purple, 1px -1px 0 $purple, -1px 1px 0 $purple, 1px 1px 0 $purple;
+        svg{width:44px;height:44px;margin-right:12px;margin-top:3px;animation:logo-spin 60s ease-in-out 10s infinite;}
+        &,
+        svg,
+        svg path{transition:.375s ease-in-out;transition-property:text-shadow, fill;}
+        &:hover{text-shadow:-1px -1px 0 $orange,1px -1px 0 $orange,-1px 1px 0 $orange,1px 1px 0 $orange;
+            svg{
+                &,
+                path{fill:$orange;}
+            }
+        }
+    }
+    nav{flex-grow:1;display:flex;align-items:stretch;
+
+        /* Blur */
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(5px);
+
+        ul{display:flex;align-items:stretch;margin:0 0 0 30px;
+            li{display:flex;align-items:stretch;padding:0 30px;
+                a{padding:15px 0 0;display:flex;align-items:center;border-bottom:3px solid transparent;}
+            }
+        }
+    }
+
+}
+    
+/* Header Active State */
+.wormhole-theme .page[data-header-selected="components"] .header #components-link,
+.wormhole-theme .page[data-header-selected="brand"] .header #brand-link,
+.header nav ul li a.active,
+
+/* Header Hover State */
+.header nav ul li a:hover{border-bottom-color:$orange;color:$orange;}
+
+/* Logo color change */
+.wormhole-theme .page[data-header-selected="components"],
+.wormhole-theme .page[data-header-selected="brand"]{
+    .header .logo{color:#F8F5FF;}
+}

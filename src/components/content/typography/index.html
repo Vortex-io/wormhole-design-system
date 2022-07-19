@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="wormhole-theme">
+<head>
+    @@include('head.html')
+    <title>Worm–Hole Design System</title>
+</head>
+<body class="page" data-page="components/content/typography" data-header-selected="components">
+
+    <div class="layout">
+
+        <!-- HEADER -->
+        @@include('header.html')
+
+        <!-- SECTION -->
+        <section>
+
+            <!-- SIDEBAR -->
+            @@include('sidebar-components.html')
+
+            <!-- CONTENT -->
+            <article>
+
+                <h1>Typography</h1>
+                <p class="sub-title">Documentation and examples for typography, including global settings, headings, body text, lists, and more.</p>
+
+                <!-- Global settings -->
+                <h2 id="global-settings"><a href="#global-settings">Global settings</a></h2>
+
+                <p>Wormhole sets basic global display, typography, and link styles.</p>
+                <p>There is a <code>config/_reset.scss</code> file that resets the browsers defaults. It also removes padding and margins for every element in the design system to start from a clean base.</p>
+                <p>The styles of the following references can be found in <code>components/_text-styles.scss</code>, and the global variables are defined in <code>config/_variables.scss</code>.</p>
+
+                <!-- Paragraph -->
+                <h2 id="body-text-and-paragraphs"><a href="#body-text-and-paragraphs">Body text / Paragraphs</a></h2>
+                <p>Base <code>font-size</code> is <code>16px</code>.</p>
+                
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<p>A wormhole is a speculative structure linking disparate points in spacetime, and is based on a special solution of the Einstein field equations. It can be visualized as a tunnel with two ends at separate points in spacetime (i.e., different locations, different points in time, or both).</p>    
+<p>Wormholes are consistent with the general theory of relativity, but whether wormholes actually exist remains to be seen. Many scientists postulate that wormholes are merely projections of a fourth spatial dimension, analogous to how a two-dimensional (2D) being could experience only part of a three-dimensional (3D) object.</p>
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>
+                </div>
+
+                <!-- Colors -->
+                <h2 id="colors"><a href="#colors">Colors</a></h2>
+
+                <p>Brand and neutral colors can be used to style text.</p>
+
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<p class="purple">Brand Purple</p>
+<p class="orange">Brand Orange</p>
+<p class="pink">Brand Pink</p>
+<p class="green">Brend Green</p>
+<p class="black">Black</p>
+<p class="white">White</p>
+<p class="gray">Gray</p>
+<p class="gray-border">Light Gray</p>
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>
+                </div>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>Usage</dt>
+                        <dd>
+                            <ul class="list">
+                                <li>
+                                    <div class="big">Brand Purple</div>
+                                    <div>class <code>.purple</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Brand Orange</div>
+                                    <div>class <code>.orange</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Brand Pink</div>
+                                    <div>class <code>.pink</code> or <code>.red</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Brand Green</div>
+                                    <div>class <code>.green</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Black</div>
+                                    <div>class <code>.black</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">White</div>
+                                    <div>class <code>.white</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Gray</div>
+                                    <div>class <code>.gray</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Light Gray</div>
+                                    <div>class <code>.gray-border</code></div>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+
+                <!-- Headings -->
+                <h2 id="headings"><a href="#headings">Headings</a></h2>
+
+                <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available.</p>
+
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <h2 id="links"><a href="#links">Links</a></h2>
+                <p>Links can have different styles regarding the action they assume.</p>
+                
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<a href="https://vor-tex.io">Regular link</a> <br/><br/>
+<a href="https://vor-tex.io" class="back">Go back</a> <br/><br/>
+<a href="https://vor-tex.io" class="green">Positive action</a> <br/><br/>
+<a href="https://vor-tex.io" class="red">Desctructive action</a> <br/><br/>
+<a href="https://vor-tex.io" class="black">Non-primary action</a> <br/><br/>
+<a href="https://vor-tex.io" class="small">Small link</a> <br/><br/>
+<a href="https://vor-tex.io" class="big">Big link</a> <br/><br/>
+<a href="https://vor-tex.io" class="disabled">Disabled link</a>
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>
+                </div>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>Usage</dt>
+                        <dd>There are 8 link styles implemented for links. These styles can be used on the <code>&lt;a&gt;</code> HTML tag, or in any other HTML tag for inline text like <code>&lt;span&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, etc (even <code>&lt;div&gt;</code> HTML tags) by adding the <code>.link</code> class to it.</dd>
+                        <dd>
+                            <ul class="list">
+                                <li>
+                                    <div class="big">Regular link</div>
+                                    <div>HTML tag <code>&lt;a&gt;</code></div>
+                                    <div class="gray">– or –</div>
+                                    <div>class <code>.link</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Back link</div>
+                                    <div>HTML tag <code>&lt;a&gt;</code> with class <code>.back</code></div>
+                                    <div class="gray">– or –</div>
+                                    <div>class <code>.link</code> and <code>.back</code> together</div>
+                                </li>
+                                <li>
+                                    <div class="big">Positive action link</div>
+                                    <div>HTML tag <code>&lt;a&gt;</code> with class <code>.green</code></div>
+                                    <div class="gray">– or –</div>
+                                    <div>class <code>.link</code> and <code>.green</code> together</div>
+                                </li>
+                                <li>
+                                    <div class="big">Destructive action link</div>
+                                    <div>HTML tag <code>&lt;a&gt;</code> with class <code>.red</code></div>
+                                    <div class="gray">– or –</div>
+                                    <div>class <code>.link</code> and <code>.red</code> together</div>
+                                </li>
+                                <li>
+                                    <div class="big">Non-primary action link</div>
+                                    <div>HTML tag <code>&lt;a&gt;</code> with class <code>.black</code></div>
+                                    <div class="gray">– or –</div>
+                                    <div>class <code>.link</code> and <code>.black</code> together</div>
+                                </li>
+                                <li>
+                                    <div class="big">Small link</div>
+                                    <div>HTML tag <code>&lt;a&gt;</code> with class <code>.small</code></div>
+                                    <div class="gray">– or –</div>
+                                    <div>class <code>.link</code> and <code>.small</code> together</div>
+                                </li>
+                                <li>
+                                    <div class="big">Big link</div>
+                                    <div>HTML tag <code>&lt;a&gt;</code> with class <code>.big</code></div>
+                                    <div class="gray">– or –</div>
+                                    <div>class <code>.link</code> and <code>.big</code> together</div>
+                                </li>
+                                <li>
+                                    <div class="big">Disabled link</div>
+                                    <div>HTML tag <code>&lt;a&gt;</code> with class <code>.disabled</code></div>
+                                    <div class="gray">– or –</div>
+                                    <div>class <code>.link</code> and <code>.disabled</code> together</div>
+                                    <br>
+                                    <div>Using <code>JavaScript</code>, you will need to add <code>event.preventDefault();</code> to the Event Handler to actually disable the link.</div>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+
+                <!-- Ordered / Unordered lists -->
+                <h2 id="lists"><a href="#lists">Ordered / Unordered lists</a></h2>
+
+                <p>Both types of lists are <code>unstyled</code> by default. To style them, just add the <code>.list</code> class to the <code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code> HTML tags.</p>
+
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<ol class="list">
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+</ol>
+<ul class="list">
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+</ul>
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>
+                </div>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>Usage</dt>
+                        <dd>HTML tags <code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code> with class <code>.list</code> </dd>
+                    </dl>
+                </div>
+
+                <!-- Fonts -->
+                <h2 id="fonts"><a href="#fonts">Fonts</a></h2>
+                <p>Both <code>font-family</code> and <code>font-weight</code> references in the design system are handled via SASS variables.</p>
+
+                <h3>Body font</h3>
+                <p><code>Halyard Display</code> font is used for body text, normal titles, forms fields, buttons, etc. Almost every element in the design system use this font.</p>
+
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<p class="regular">This copy is in a regular variant</p>
+<p class="semi">This copy is in a semi-bold variant</p>
+<p class="bold">This copy is in a bold variant</p>
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>                    
+                </div>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>Usage</dt>
+                        <dd>SASS variable <code>$font-body</code> </dd>
+                        <dd>class <code>.font-body</code> </dd>
+                    
+                        <dt>Weight variants</dt>
+                        <dd>There are 3 weight variants implemented:</dd>
+                        <dd>
+                            <ul class="list">
+                                <li>
+                                    <div class="big">Regular weight (400)</div>
+                                    <div>SASS variable <code>$fw-regular</code></div>
+                                    <div>class <code>.regular</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Semi-bold weight (500)</div>
+                                    <div>SASS variable <code>$fw-semi</code></div>
+                                    <div>class <code>.semi</code></div>
+                                </li>
+                                <li>
+                                    <div class="big">Bold weight (700)</div>
+                                    <div>SASS variable <code>$fw-bold</code></div>
+                                    <div>class <code>.bold</code></div>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+
+                <h3>Main title font</h3>
+                <p><code>Paralucent</code> font is used for main titles.</p>
+
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<h1>Main Title</h1>                            
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>                    
+                </div>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>Usage</dt>
+                        <dd>SASS variable <code>$font-title</code> </dd>
+                        <dd>class <code>.font-title</code> </dd>
+                    </dl>
+                </div>
+
+                <h3>Code reference font</h3>
+                <p><code>Courier</code> or <code>Monospace</code> fonts are used for <code>code</code> references.</p>
+
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<pre><code>
+{
+    "fieldDataCollection": [
+        {
+            "id": "CL1:COM",
+            "commodityUnits": "USD/bbl.",
+            "commodityContractDate": "Oct 2018",
+            "name": "Generic 1st 'CL' Future",
+            "price": 68.68,
+            "priceChange1Day": -0.04,
+            "percentChange1Day": -0.05820700153708458,
+            "lastUpdateEpoch": "1535369835",
+            "lowPrice": 68.34,
+            "highPrice": 68.79,
+            "priceDate": "8/27/2018",
+            "priceTime": "7:37 AM",
+            "lastUpdateTime": "7:37 AM",
+            "lastUpdateISO": "2018-08-27T11:37:15.000Z",
+            "userTimeZone": "EDT",
+            "longName": "WTI Crude Oil (Nymex)",
+            "shortName": "WTI Crude"
+        }
+    ]
+}
+</code></pre>
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>                    
+                </div>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>Usage</dt>
+                        <dd>SASS variable <code>$font-code</code> </dd>
+                        <dd>class <code>.font-code</code> </dd>
+                    </dl>
+                </div>
+
+                <h3>Annotation font</h3>
+                <p><code>OCR A Std</code> font is used to have like an annotation style in the UI. Usually used on onboardings or first-use of a section.</p>
+
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+<h3 class="font-annotation">Start by creating an API here</h3>
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>                    
+                </div>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>Usage</dt>
+                        <dd>SASS variable <code>$font-annotation</code> </dd>
+                        <dd>class <code>.font-annotation</code> </dd>
+                    </dl>
+                </div>
+                
+            </article>
+        </section>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    @@include('bottom_scripts.html')
+    <script>
+        // Handle click event on disabled link
+        document.querySelector('a.disabled').addEventListener('click', (e) => e.preventDefault());
+    </script>
+
+</body>
+</html>

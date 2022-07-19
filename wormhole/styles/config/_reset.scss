@@ -1,0 +1,11 @@
+// Reset
+*{box-sizing:border-box;}
+html, body, div, p, h1, h2, h3, h4, h5, h6, ul, li, ol, dd, dl, dt, form, legend, label, fieldset, legend, address, center, acronym, iframe, blockquote{margin:0;padding:0;font-style:normal;font-weight:$fw-regular;list-style:none;}
+body{font-size:16px;line-height:normal;font-family:$font-body;background:$white;color:$black;}
+a, span{word-wrap:break-word;}
+img, fieldset, iframe{border:0;}
+input, select, textarea{outline:none;font-family:$font-body;font-size:16px;}
+button{font-family:$font-body;}
+textarea{resize:none;}
+table{border-spacing:0;}
+table, tr, td, th, tbody, thead, tfoot, caption{border:0;margin:0;padding:0;border-collapse:collapse;word-wrap:break-word;}

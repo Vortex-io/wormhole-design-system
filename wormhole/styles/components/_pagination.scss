@@ -1,0 +1,68 @@
+
+/* 
+ * Pagination 
+*/
+
+// Variables
+$pagination-height:40px;
+$pagination-border-width:1px;
+$pagination-border-radius:20px;
+$pagination-element-height:$pagination-height - ($pagination-border-width * 2);
+
+// Pagination
+.pagination{margin:30px 15px;text-align:center;height:$pagination-height;}
+
+// Items per page
+.items-per-page{padding-right:15px;display:flex;align-items:center;float:left;
+    label{padding-right:10px;font-size:14px;font-weight:$fw-regular;white-space:nowrap;}
+    select{width:65px;}
+}
+
+// Backgrid Pagination
+.paginator{height:$pagination-height;}
+.backgrid-paginator{display:inline-block;border:$pagination-border-width solid $gray-border;background:$gray-bg;height:$pagination-height;border-radius:$pagination-border-radius;
+    ul{margin:0;padding:0;display:flex;align-items:flex-start;
+        & > li{border-right:$pagination-border-width solid $gray-border;padding:0;margin:0;float:none;overflow:hidden;
+            
+            // Visual adjustments to  prev / next buttons
+            &:first-child{border-radius:$pagination-border-radius 0 0 $pagination-border-radius;
+                a{padding-right:4px !important;border-radius:$pagination-border-radius 0 0 $pagination-border-radius;}
+            }
+            &:nth-child(2){
+                a{padding-right:9px !important;}
+            }
+            &:nth-last-child(2){
+                a{padding-left:9px !important;}
+            }
+            &:last-child{border-right:0;border-radius:0 $pagination-border-radius $pagination-border-radius 0;
+                a{padding-left:4px !important;border-radius:0 $pagination-border-radius $pagination-border-radius 0;}
+            }
+
+            // Button Page
+            a{display:block;color:$black;height:$pagination-element-height;line-height:$pagination-element-height;font-weight:$fw-semi;min-width:$pagination-height;transition:background-color .1s ease-in-out;
+
+                // Hover state
+                &:hover{text-decoration:none;background-color:transparentize($purple, 0.9);color:$purple;}
+
+                // Pressed state
+                &:active{
+                    //box-shadow:inset 0 0 3px transparentize($purple, .5);
+                    background-color:transparentize($purple, 0.85);
+                }
+            }
+
+            // Active Page
+            &.active a{
+                &,
+                &:hover,
+                &:active{color:$white;background-color:$purple;cursor:default;box-shadow:inset 0 0 3px transparentize($black, .5);}
+            }
+
+            // Disabled Page
+            &.disabled a{
+                &,
+                &:hover{opacity:.3;color:$gray;background-color:inherit;}
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="wormhole-theme">
+<head>
+    @@include('head.html')
+    <title>Worm–Hole Design System</title>
+</head>
+<body class="page" data-page="components/actions/button" data-header-selected="components">
+
+    <div class="layout">
+
+        <!-- HEADER -->
+        @@include('header.html')
+
+        <!-- SECTION -->
+        <section>
+
+            <!-- SIDEBAR -->
+            @@include('sidebar-components.html')
+
+            <!-- CONTENT -->
+            <article>
+
+                <div class="main-info">
+                    <h1>Button</h1> 
+                    <p>Examples of button implementation.</p>
+                </div>
+
+                <h3>Usage</h3>
+
+                <div class="component-example">
+                    @@include('component-example-tabs.html')
+                    <div class="tabs-content">
+                        <div data-content="result" class="component-example-content active">
+                            
+                        </div>
+                        @@include('component-example-code.html')
+                    </div>
+                </div>
+
+                <h3>Properties</h3>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>checked</dt>
+                        <dd>
+                            <span>Type:</span>
+                            <code>boolean</code>
+                        </dd>
+                        <dd>
+                            <span>Default:</span>
+                            <code>false</code>
+                        </dd>
+                    </dl>
+                    <p>Set checkbox <code>checked</code> state.</p>
+                </div>
+
+                <div class="component-option">
+                    <dl>
+                        <dt>disabled</dt>
+                        <dd>
+                            <span>Type:</span>
+                            <code>boolean</code>
+                        </dd>
+                        <dd>
+                            <span>Default:</span>
+                            <code>false</code>
+                        </dd>
+                    </dl>
+                    <p>Set checkbox <code>disabled</code> state.</p>
+                </div>
+
+            </article>
+        </section>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    @@include('bottom_scripts.html')
+
+</body>
+</html>

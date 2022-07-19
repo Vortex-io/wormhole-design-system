@@ -1,0 +1,21 @@
+/* 
+ * Alerts 
+*/
+.alert{padding:20px 15px;margin-bottom:15px;background:$gray-bg;
+
+    // No Margin
+    &.no-margin{margin-bottom:0;}
+
+    // Danger
+    &.alert-danger{background:$pink-bg;color:$pink;}
+
+    // Warning
+    &.alert-warning{background:$orange-bg-light;color:$orange;}
+
+    // Info
+    &.alert-info{background:$purple-bg;color:$purple;}
+
+    // Success
+    &.alert-success{background:$green-bg-light;color:$green;}
+
+}

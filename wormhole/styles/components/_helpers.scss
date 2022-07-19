@@ -1,0 +1,78 @@
+/*
+ * Helpers
+*/
+
+// Show / Hide
+.hidden{display:none !important;}
+.show{display:block !important;}
+
+// Hide text when element is used with a bg image
+.imageText{overflow:hidden;text-indent:10000px;}
+
+// Separator
+hr{border:0 none;margin:15px 0;min-height:1px;height:1px;overflow:hidden;background:$gray-border;
+    &.no-margin{margin:0;}
+    &.double-margin{margin:30px 0;}
+}
+.hr{border-top:1px solid $gray-border;}
+
+// Flex
+.space-between{display:flex;align-items:center;justify-content:space-between;}
+
+// Display
+.block{display:block;}
+.inline{display:block;}
+.inline-block{display:block;}
+.flex{display:flex;}
+
+// Text Helpers
+.center{text-align:center;}
+.left{text-align:left;}
+.right{text-align:right;}
+.text-overflow{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;word-wrap:normal;}
+
+// Position Helpers
+.relative{position:relative;}
+.absolute{position:absolute;}
+.fixed{position:fixed;}
+
+/*
+ * Animations / Transitions
+*/
+
+// Transition
+.transition{transition:all .375s ease-in-out;}
+
+// Highlight - Animation to highlight something
+@keyframes highlight{
+    0%{background:rgba($orange, .2);}
+    100%{background:none;}
+}
+.highlight{animation:highlight 2s ease-in 1;}
+
+/*
+ * Components - TODO: Mover a otro lado. No corresponde tenerlo acá
+*/
+
+// Box Gray
+.box-gray{background:$gray-bg;padding:25px 30px;margin-bottom:30px;
+
+    // Headings
+    h1,h2,h3,h4,h5,h6{color:$gray;font-size:20px;font-weight:$fw-semi;margin-bottom:15px;}
+
+    // With Border
+    &.with-border{border:1px solid $gray-border;}
+
+    // Rounded
+    &.rounded{border-radius:5px;}
+    
+}
+
+// TODO: Eliminar uso de clearfix y floats.
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;}
+.FL{float:left;}
+.FR{float:right;}
+
+// TODO: Eliminar uso de DN.
+.DN{display:none;}

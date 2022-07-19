@@ -1,0 +1,97 @@
+/*** Variables ***/
+
+/* 
+ * ------------------------
+ * Colors 
+ * ------------------------
+ */
+
+// Brand Purple
+$purple:#7739f5;
+$purple-hover:darken($purple, 10%);
+$purple-bg:rgba($purple, .1);
+$purple-bg-light:rgba($purple, .05);
+
+// Brand Orange
+$orange:#FFB632;
+$orange-hover:darken($orange,8%);
+$orange-bg:rgba($orange,.2);
+$orange-bg-light:rgba($orange,.1);
+
+// Brand Pink
+$pink:#e6007e;
+$pink-hover:darken($pink, 3%);
+$pink-bg:rgba($pink,.1);
+$pink-bg-light:rgba($pink,.05);
+
+// Brand Green
+$green:#00cc83;
+$green-hover:darken($green,3%);
+$green-bg:rgba($green,.15);
+$green-bg-light:rgba($green,.1);
+
+// Neutral
+$white:#FFF;
+$black:#051C2C;
+$gray:#999;
+$gray-border:#CCC;
+$gray-bg:#F5F5F5;
+
+/* 
+ * ------------------------
+ * Font Families
+ * ------------------------
+*/
+
+// Font Body
+$font-body:'Halyard Display', Helvetica, Arial, sans-serif;
+
+// Font Title
+$font-title:'Paralucent',  #{$font-body};
+
+// Font Code
+$font-code:'Courier', monospace;
+
+// Font Annotation
+$font-annotation:'OCR A Std', #{$font-code};
+
+/* 
+ * ------------------------
+ * Font Weights
+ * ------------------------
+ */
+
+// Regular
+$fw-regular:normal;
+
+// Semi Bold
+$fw-semi:500;
+
+// Bold
+$fw-bold:bold;
+
+/* 
+ * ------------------------
+ * Media Queries
+ * ------------------------
+ */
+
+// TODO: Agregar breakpoints nuevos al hacer el responsive del workspace
+
+// Small
+$break-sm:768px;
+
+// Medium
+$break-md:992px;
+
+// Large
+$break-lg:1200px;
+
+/* 
+ * ------------------------
+ * Helpers
+ * ------------------------
+ */
+
+// Disabled cursor for form controls and buttons
+$cursor-disabled: not-allowed;

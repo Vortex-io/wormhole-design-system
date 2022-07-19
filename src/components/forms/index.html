@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="wormhole-theme">
+<head>
+    @@include('head.html')
+    <title>Worm–Hole Design System</title>
+</head>
+<body class="page">
+
+    <div class="layout">
+
+        <!-- HEADER -->
+        @@include('header.html')
+
+        <!-- SECTION -->
+        <section>
+
+            <!-- SIDEBAR -->
+            @@include('sidebar-components.html')
+
+            <!-- CONTENT -->
+            <article>
+
+                <h2>Redirecting to page...</h2>
+
+            </article>
+        </section>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            window.location.pathname = "/components/forms/text-fields/"
+        });
+      </script>
+
+</body>
+</html>

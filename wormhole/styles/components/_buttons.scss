@@ -1,0 +1,260 @@
+// Variables
+$button-height:48px;
+$button-line-height:calc(#{$button-height} - 2px);
+
+// Button
+.button{min-width:150px;height:$button-height;line-height:$button-line-height;font-size:16px;padding:0 20px;display:inline-block;border:1px solid transparent;text-align:center;cursor:pointer;white-space:nowrap;border-radius:24px;transition:.1s ease-in-out;transition-property: background-color, box-shadow, color, border-color;
+
+  // Small
+  &.small{height:34px;border-radius:34px;line-height:22px;font-size:14px;padding:4px 12px;min-width:auto;}
+
+  // Big
+  &.big{height:66px;line-height:64px;font-size:20px;padding:0 40px;border-radius:64px;}
+
+  // Gray - Normal button
+  &{border-color:$gray-border;background:$white;color:$purple;}
+  &:hover{color:$purple-hover;border-color:rgba($purple,.2);text-decoration:none;background:$purple-bg-light;}
+
+  // Alpha
+  &.alpha,
+  &.alpha-icon{font-size:14px;text-transform:none;border-color:transparent;background:none;font-weight:$fw-regular;min-width:inherit !important;}
+  &.alpha:hover{text-decoration:none;}
+  &.alpha-icon:active{box-shadow:none;}
+
+  // Back
+  &.back{
+    &:before{content:"< ";padding-right:5px;transform:translateX(0);transition:transform .375s ease-in-out;}
+    &:hover{
+      &:before{transform:translateX(-4px);}
+    }
+  }
+
+  // Next
+  &.next{
+    &:after{content:" >";padding-left:5px;transform:translateX(0);transition:transform .375s ease-in-out;}
+    &:hover{
+      &:after{transform:translateX(4px);}
+    }
+  }
+
+  // Add
+  &.add:after{content:" +";padding-left:5px;}
+
+  // Active
+  &.active{transition:none !important;}
+
+  // Primary button
+  &.primary{background:$green;border-color:transparent;color:$white;font-weight:$fw-semi;
+    &:hover{background:$green-hover;}
+  }
+
+  // Secondary button
+  &.secondary{background:$purple;border-color:transparent;color:$white;font-weight:$fw-semi;
+    &:hover{background:$purple-hover;}
+  }
+
+  // Selected button
+  &.selected{background:$orange;border-color:transparent;color:$white;font-weight:$fw-semi;
+    &:hover{background:$orange-hover;}
+  }
+
+  // Delete button
+  &.delete{background:$pink;border-color:transparent;color:$white;font-weight:$fw-semi;
+    &:hover{background:$pink-hover;}
+  }
+
+  // Red Text Button
+  &.red{color:$pink !important;
+    &:hover,
+    &:active{color:$pink-hover !important;background:$pink-bg-light;border-color:rgba($pink,.25);}
+    &:active{border-color:$pink;}
+  }
+
+  // Green text Button
+  &.green{color:$green !important;
+    &:hover,
+    &:active{color:$green-hover !important;background:$green-bg-light;border-color:rgba($green,.35);}
+    &:active{border-color:$green;}
+  }
+
+  // Active state
+  &:active{box-shadow:0 5px 15px rgba($purple,.15);border-color:$purple;
+    
+    // Red / Delete
+    &.red,
+    &.delete{box-shadow:0 5px 15px rgba($pink,.25);border-color:$pink;}
+
+    // Green / Primary
+    &.green,
+    &.primary{box-shadow:0 5px 15px rgba($green,.25);border-color:$green;}
+
+  }
+
+    // Dont apply active state to these
+    &.alpha:active{box-shadow:0 0 0 transparent;}
+
+  // Disabled
+  &[disabled=disabled],
+  &:disabled,
+  &.disabled{color:$gray !important;cursor:default;pointer-events:none;box-shadow:none;}
+
+    // Disabled - Primary and Secondary
+    &.primary,
+    &.secondary{
+      &[disabled=disabled],
+      &:disabled,
+      &.disabled{color:$white !important;background:$gray;pointer-events:auto !important;cursor:$cursor-disabled !important;box-shadow:none;}
+    }
+
+  // More Button
+  &.more-button{padding:0;width:$button-height;min-width:0;
+    .icon-more{margin:0;}
+  }
+
+}
+
+/* 
+  * Button pulldown
+*/
+.button-pulldown{position:relative;display:flex;flex-direction:column;align-items:flex-end;height:$button-height;
+
+  // Main Button
+  & > .button{width:auto;min-width:100%;font-weight:$fw-semi;position:relative;z-index:2001;
+    .icon-pulldown{margin-right:-8px;}
+  }
+
+  // Dropdown
+  .dropdown{opacity:0;transition:.1s ease-in-out;transition-property:opacity, border-radius;position:relative;z-index:2000;min-width:100%;border-radius:24px;
+    li{padding:0;background:$white;
+      //& + li{border-top:1px solid $purple-bg;}
+      .button{box-shadow:0 0 0 transparent;white-space:nowrap;width:auto;display:block;text-align:left;border-radius:0;font-weight:$fw-regular;height:auto;line-height:42px;padding:0 20px 2px;}
+    }
+  }
+
+  // Active state
+  &.active{
+
+    // Dropdown
+    .dropdown{opacity:1 !important;}
+
+  }
+
+  /* 
+   * Button pulldown - Primary
+  */
+  // Primary Button
+  &.primary{
+
+    // Main Button
+    & > .button{background:$green;color:$white;border-color:$green;
+      &:hover,
+      &:active{border-color:$green-hover;background:$green-hover;}
+      &:active{box-shadow:0 5px 15px rgba($green,.25);}
+    }
+    
+    // Active state
+    &.active{
+      & > .button{background-color:darken($green, 2%);border-color:darken($green, 2%);box-shadow:0 5px 15px rgba($green,.25);}
+    }
+
+    // Dropdown
+    .dropdown{background-color:rgba($green,.6);margin-top:-$button-height;box-shadow:0 5px 15px rgba($green,.25);
+      li{
+        & + li{border-top:1px solid rgba($green,.8);}
+        .button{background-color:rgba($green,.6);border-color:transparent;color:$white;
+          &:hover{background-color:rgba($green,.8);border-color:transparent;}
+        }
+        &:first-child{
+          &,
+          .button{border-radius:24px 24px 0 0;}
+          .button{padding-top:$button-height;}
+        }
+        &:last-child{
+          &,
+          .button{border-radius:0 0 20px 20px;}
+        }
+        &:only-child{
+          &,
+          .button{border-radius:24px 24px 20px 20px;}
+        }
+      }
+    }
+
+  }
+  
+  /* 
+   * Button pulldown - More Actions 
+  */
+  &.more-actions{
+       
+    // Para pantallas menores a 1439
+    @media screen and (max-width:1439px) {
+
+      &{width:$button-height;}
+
+      // Main button
+      .more-button{z-index:initial;
+        .icon{opacity:1;transition:opacity .2s ease-in-out;}
+        &:after{content:"x";opacity:0;transition:opacity .2s ease-in-out;color:$purple;font-weight:$fw-semi;font-size:20px;position:absolute;top:0;left:0;right:0;bottom:0;text-align:center;line-height:42px;}
+        &:hover{
+          &:after{color:$purple-hover;}
+        }
+      }
+
+      // Dropdown
+      .dropdown{margin-top:-1px;border-radius:10px 0 10px 10px;box-shadow:0 5px 15px rgba($purple,.15);
+        //border:1px solid $purple;
+        border:1px solid $gray-border;
+        li{
+          //border-top:1px solid $purple;
+          border-top:1px solid $gray-border;
+          &:first-child{border:0;}
+          .button{width:auto;min-width:120px;display:block;border:0;text-align:left;box-shadow:0 0 0 transparent;
+            .icon{display:none;}
+            // &:hover{background:$purple-bg;color:$white !important;
+            //   &.red{background:$pink;}
+            // }
+          }
+          &:first-child{
+            &,
+            .button{border-radius:10px 0 0 0;}
+          }
+          &:last-child{
+            &,
+            .button{border-radius:0 0 10px 10px;}
+          }
+          &:only-child{
+            &,
+            .button{border-radius:10px 0 10px 10px;}
+          }
+        }
+      }
+   
+      // Active state
+      &.active{
+        .more-button{border-radius:24px 24px 0 0;box-shadow:0 5px 15px rgba($purple,.15);background:$white;border-color:$gray-border;
+          .icon{opacity:0;}
+          &:after{opacity:1;}
+          &:hover{background:$purple-bg-light;}
+          &:active{background:$purple-bg;}
+        }
+      }
+
+    }
+
+    // Para pantallas mayores a 1440 - ocultamos el boton ... y mostramos todas las acciones secundarias visibles
+    @media screen and (min-width:1440px) {
+      .more-button{display:none;}
+      .dropdown{border:0;display:flex;opacity:1;
+        li{border:0;margin-right:15px;
+          &:last-child{margin-right:0;}
+          .button{width:$button-height;min-width:0;text-indent:-10000px;line-height:$button-height;overflow:hidden;position:relative;border-radius:24px;
+            .icon{display:block;width:24px;height:24px;position:absolute;top:11px;left:11px;margin:0;}
+          }
+        }
+      }
+    }
+  
+  }
+
+}

@@ -1,0 +1,39 @@
+/*
+ * Worm-Home base styles for Documentation Website
+*/
+
+// Structure
+.layout{padding:65px 0 0;}
+.page{
+    section{display:flex;align-items:flex-start;
+        .sidebar{flex:0 0 320px;width:320px;padding:75px 30px 30px;}
+        article{flex-grow:1;padding:75px 60px 60px;margin-left:320px;}
+    }
+}
+
+// Text Styles
+h1{font-family:$font-title;}
+
+// Sidebar
+.sidebar{position:fixed;top:0;left:0;bottom:0;overflow:auto;overflow-x:hidden;background:$purple-bg-light;
+    dl{margin-bottom:15px;color:$gray;
+        dd + dt{margin-top:30px;}
+        dt{margin-bottom:10px;font-weight:500;color:$gray;text-transform:uppercase;} 
+        dd{margin-bottom:5px;margin-left:15px;}
+    }
+}
+
+// Article
+article{overflow-x:hidden;
+    & > h1{font-size:45px;color:$green;}
+    p{margin-bottom:15px;}
+    .sub-title{font-size:20px;color:$gray;margin-bottom:0;}
+    .big{font-size:18px;}
+    h2{
+        a{color:$pink;margin-top:70px;display:inline-block;
+            &:hover{color:$purple;}
+        }
+    }
+    h3{margin-top:50px;}
+    code{color:$pink;}
+}

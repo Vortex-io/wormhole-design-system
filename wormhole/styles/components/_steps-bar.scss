@@ -1,0 +1,63 @@
+/* Steps Bar - only support 0 to 4 steps at the moment */
+.steps-bar{font-family:$font-title;display:flex;white-space:nowrap;flex-wrap:wrap;
+
+  li{padding-left:25px;
+    &:first-child{padding-left:0;}
+    a{padding:0;line-height:normal;font-size:32px;color:$gray;cursor:default;font-weight:$fw-bold;white-space:nowrap;
+      // Responsive
+      @media screen and (max-width:1600px){
+        &{font-size:30px;}
+      }
+      @media screen and (max-width:1440px){
+        &{font-size:25px;}
+      }
+      @media screen and (max-width:1300px){
+        &{font-size:23px;}
+      }
+      @media screen and (max-width:1200px){
+        &{font-size:22px;}
+      }
+      @media screen and (max-width:998px){
+        &{font-size:21px;}
+      }
+    }
+    &.step0 a:before{content:"1. ";}
+    &.step1 a:before{content:"2. ";}
+    &.step2 a:before{content:"3. ";}
+    &.step3 a:before{content:"4. ";}
+    &.step4 a:before{content:"5. ";}
+  }
+
+  /* Completed steps */
+  &[data-step="1"] li.step0 a,
+  &[data-step="1"] li.step0 a:hover,
+
+  &[data-step="2"] li.step0 a,
+  &[data-step="2"] li.step0 a:hover,
+  &[data-step="2"] li.step1 a,
+  &[data-step="2"] li.step1 a:hover,
+
+  &[data-step="3"] li.step0 a,
+  &[data-step="3"] li.step0 a:hover,
+  &[data-step="3"] li.step1 a,
+  &[data-step="3"] li.step1 a:hover,
+  &[data-step="3"] li.step2 a,
+  &[data-step="3"] li.step2 a:hover,
+
+  &[data-step="4"] li.step0 a,
+  &[data-step="4"] li.step0 a:hover,
+  &[data-step="4"] li.step1 a,
+  &[data-step="4"] li.step1 a:hover,
+  &[data-step="4"] li.step2 a,
+  &[data-step="4"] li.step2 a:hover,
+  &[data-step="4"] li.step3 a,
+  &[data-step="4"] li.step3 a:hover{color:$green;cursor:pointer;}
+
+  li.step0 a,
+  li.step-done + li.step:not(.step-done) a{color:$black;}
+
+  li.step-done a{color:$green;cursor:pointer;
+    &:hover{color:$green-hover;}
+  }
+
+}

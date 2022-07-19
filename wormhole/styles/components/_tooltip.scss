@@ -1,0 +1,27 @@
+/*
+ * Tooltip 
+*/
+.tooltip{color:$white;background-color:$black;visibility:hidden;border-radius:3px;text-align:left;opacity:0;z-index:2000;padding:7px 11px;position:absolute;cursor:default;transition:all 240ms ease-in-out;line-height:19px;top:auto;left:50%;
+  &:after{content:' ';height:0;width:0;border:6px solid transparent;position:absolute;}
+  
+  // Tooltip top
+  &.tooltip-top{bottom:115%;transform:translateX(-50%);
+    &:after{bottom:-12px;left:50%;margin-left:-7px;border-top-color:$black;}
+  }
+
+  // Tooltip right
+  &.tooltip-right{top:50%;right:auto;left:106%;transform:translateY(-50%);margin-right:auto;margin-left:auto;
+    &:after{left:-5px;top:50%;margin-top:-6px;border-right-color:$black;}
+  }
+
+  // Tooltip bottom
+  &.tooltip-bottom{top:115%;bottom:auto;transform:translateX(-50%);margin-bottom:auto;
+    &:after{top:-12px;left:50%;margin-left:-7px;border-bottom-color:$black;}
+  }
+
+  // Tooltip left
+  &.tooltip-left{top:50%;left:auto;right:105%;transform:translateY(-50%);margin-left:auto;
+    &:after{right:-12px;top:50%;margin-top:-6px;border-left-color:$black;}
+  }
+
+}

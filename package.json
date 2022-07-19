@@ -1,0 +1,30 @@
+{
+  "name": "@vor-tex/wormhole-design-system",
+  "version": "1.0.0",
+  "description": "Worm–Hole is Vor-Tex's design system",
+  "main": "index.html",
+  "author": "Ignacio Sans",
+  "dependencies": {
+    "hash-tabs": "~1.0.4",
+    "jquery": "^2.2.4",
+    "select2": "^4.0.13"
+  },
+  "dependenciesComments": {
+    "@brandextract/jquerytools": "^1.2.8",
+    "@highlightjs/cdn-assets": "~11.3.1",
+    "codemirror": "^5.64.0",
+    "gritter": "^1.7.4",
+    "jquery-ui-dist": "^1.12.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^7.0.1"
+  },
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build"
+  }
+}
