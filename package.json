@@ -26,5 +26,14 @@
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp build"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vortex-io/wormhole-design-system.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vortex-io/wormhole-design-system/issues"
+  },
+  "homepage": "https://github.com/Vortex-io/wormhole-design-system#readme"
 }
