@@ -61,12 +61,6 @@ input[type=search]::-webkit-search-cancel-button{-moz-appearance:none;-webkit-ap
   select:active,
   textarea:active{border:1px solid $purple;box-shadow:0 0 8px rgba($purple,.15);}
 
-  // // Radio Buttons – Focus / Active
-  // input[type=radio]{
-  //   &:active,
-  //   &:focus{box-shadow:0 0 0 transparent;}
-  // }
-
 // Select2 – override styles
 .select2-container{display:block !important;width:100% !important;
   .select2-selection{border-color:#cbcbcb !important;border-radius:0 !important;height:40px !important;transition:all 0.30s ease-in-out !important;
@@ -86,9 +80,17 @@ input[type=search]::-webkit-search-cancel-button{-moz-appearance:none;-webkit-ap
   .select2-results__option{font-size:16px !important;padding:8px 12px !important;}
   .select2-results__option--highlighted[aria-selected]{background:$purple !important;}
 }
-.select2-container--open .select2-dropdown--below{border-radius:0 !important;}
-body > .select2-container{z-index: 100000 !important;}
+.select2-container--open{
+  .select2-dropdown{border-color:$purple;border-radius:0 !important;
+    &.select2-dropdown--below{border-radius:0 0 10px 10px !important;background:transparent;}
+    .select2-results{background:$white;
+      &,
+      li:last-child{border-radius:0 0 9px 9px !important;}
+    }
+  }
+}
 .select-reverse-order{display:flex;flex-direction:column-reverse;}
+body > .select2-container{z-index: 100000 !important;width:auto !important;}
 
 // Error State
 input[type=text].has-error,

@@ -124,18 +124,34 @@ $button-line-height:calc(#{$button-height} - 2px);
   }
 
   // Dropdown
-  .dropdown{opacity:0;transition:.1s ease-in-out;transition-property:opacity, border-radius;position:relative;z-index:2000;min-width:100%;border-radius:24px;
+  .dropdown{opacity:0;visibility:hidden;transition:.1s ease-in-out;transition-property:opacity, border-radius;position:relative;z-index:2000;min-width:100%;border-radius:24px;margin-top:-$button-height;
     li{padding:0;background:$white;
-      //& + li{border-top:1px solid $purple-bg;}
-      .button{box-shadow:0 0 0 transparent;white-space:nowrap;width:auto;display:block;text-align:left;border-radius:0;font-weight:$fw-regular;height:auto;line-height:42px;padding:0 20px 2px;}
+      & + li{border-top:1px solid rgba($purple,.2);}
+      .button{box-shadow:0 0 0 transparent;white-space:nowrap;width:auto;display:block;text-align:left;border-radius:0;font-weight:$fw-regular;height:auto;line-height:42px;padding:0 20px 2px;border-color:transparent;
+        &:hover{border-color:transparent;}
+      }
+      &:first-child{
+        &,
+        .button{border-radius:24px 24px 0 0;}
+        .button{padding-top:$button-height;}
+      }
+      &:last-child{
+        &,
+        .button{border-radius:0 0 20px 20px;}
+      }
+      &:only-child{
+        &,
+        .button{border-radius:24px 24px 20px 20px;}
+      }
     }
   }
 
   // Active state
   &.active{
+    & > .button{border-color:$purple;box-shadow:0 5px 15px rgba($purple,.25);}
 
     // Dropdown
-    .dropdown{opacity:1 !important;}
+    .dropdown{opacity:1 !important;visibility:visible !important;box-shadow:0 5px 15px rgba($purple,.10);}
 
   }
 
@@ -158,24 +174,11 @@ $button-line-height:calc(#{$button-height} - 2px);
     }
 
     // Dropdown
-    .dropdown{background-color:rgba($green,.6);margin-top:-$button-height;box-shadow:0 5px 15px rgba($green,.25);
+    .dropdown{background-color:rgba($green,.6);box-shadow:0 5px 15px rgba($green,.25);
       li{
         & + li{border-top:1px solid rgba($green,.8);}
-        .button{background-color:rgba($green,.6);border-color:transparent;color:$white;
-          &:hover{background-color:rgba($green,.8);border-color:transparent;}
-        }
-        &:first-child{
-          &,
-          .button{border-radius:24px 24px 0 0;}
-          .button{padding-top:$button-height;}
-        }
-        &:last-child{
-          &,
-          .button{border-radius:0 0 20px 20px;}
-        }
-        &:only-child{
-          &,
-          .button{border-radius:24px 24px 20px 20px;}
+        .button{background-color:rgba($green,.6);color:$white;
+          &:hover{background-color:rgba($green,.8);}
         }
       }
     }
